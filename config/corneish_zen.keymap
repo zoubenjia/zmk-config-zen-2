@@ -64,7 +64,7 @@
 &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT                           &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
 &kp LCTRL &none   &none  &none  &none   &none                             &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
 &kp LSHFT &out OUT_USB   &out OUT_BLE &none   &none   &none                  &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                          &kp CAP &trans   &kp SPACE                           &kp RET   &trans    &kp RALT
+                          &kp CAPS &trans   &kp SPACE                           &kp RET   &trans    &kp RALT
             >;
         };
     };
