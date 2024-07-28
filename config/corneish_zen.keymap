@@ -36,9 +36,9 @@
             display-name = "QWERTY";
 
             // --------------------------------------------------------------------------------
-            // | ESC  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |f
+            // | ESC  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | TAB  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   | 
-            // | ALT  |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHIFT|
+            // | SHIFT|  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ALT  |
             //                    | LWR | GUI | SPC |   | ENT | CTRL | RSE |
 
             bindings = <
@@ -53,14 +53,14 @@
             display-name = "NUMBER";
 
             // -----------------------------------------------------------------------------------------
-            // | ESC |  1    |  2   |  3  |  4  |  5  |    |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | TAB |BT_CLR | BT1  | BT2 | BT3 | BT4 | BT5| LFT | DWN |  UP | RGT | HOME| PGUP |
-            // | ALT |RGB_OFF|RGB_ON|     |     |     |    |     |     |     |     | END | PGDN |
-            //                      | LWR |     | SPC |    | ENT |     | ALT |
+            // | ESC  |  1    |  2   |  3  |  4  |  5  |    |  6  |  7  |  8  |  9  |  0  | BKSP |
+            // | TAB  |BT_CLR | BT1  | BT2 | BT3 | BT4 | BT5| LFT | DWN |  UP | RGT | HOME| PGUP |
+            // | SHIFT|RGB_OFF|RGB_ON|     |     |     |    |     |     |     |     | END | PGDN |
+            //                       | LWR |     | SPC |    | INS | DEL | RSE |
 
             bindings = <
 &trans  &kp N1           &kp N2          &kp N3             &kp N4            &kp N5             &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1       &bt BT_SEL 2      &bt BT_SEL 3       &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
+&trans  &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2       &bt BT_SEL 3      &bt BT_CLR_ALL     &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
 &trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &ext_power EP_OFF  &ext_power EP_ON  &rgb_ug RGB_EFF    &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
                                          &trans             &trans            &trans             &kp INS          &kp DEL          &trans
             >;
@@ -73,7 +73,7 @@
             // | ESC |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | TAB |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
             // | ALT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                   | LWR |     | SPC |   | ENT |     | ALT |
+            //                   | LWR |     | SPC |   | ENT |     | RSE |
 
             bindings = <
 &trans  &kp EXCL      &kp AT        &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
