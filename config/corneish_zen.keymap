@@ -39,7 +39,7 @@
             // | ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | BKSP |
             // | TAB |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |  '   | 
             // | SHFT|  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  | ALT  |
-            //                   | SYM | CMD | SPC |   | ENT | CTRL | NUM |
+            //                   | SYM | CMD | SPC |   | ENT | CTRL| NUM |
 
             bindings = <
 &kp ESC    &kp Q  &kp W  &kp E   &kp R     &kp T          &kp Y        &kp U      &kp I      &kp O    &kp P     &kp BSPC
@@ -70,9 +70,9 @@
             display-name = "SYMBOL";
 
             // -----------------------------------------------------------------------------------------
-            // | ESC |  ^  |  &  |  *  |  (  |  )  |   |  -  |  (  |  )  |  _  |    |BKSP |
-            // | TAB |  !  |  @  |  #  |  $  |  %  |   |  =  |  [  |  ]  |  \  |    |  `  |
-            // | SHFT| USB | BLE |     |     |     |   |  +  |  {  |  }  | "|" |    |  ~  |
+            // | ESC |  ^  |  &  |  *  |  (  |  )  |   |  +  |  -  |  *  |  /  | ^  |  =  |
+            // | TAB |  !  |  @  |  #  |  $  |  %  |   |  (  |  )  |  [  |  ]  | {  |  }  |
+            // | SHFT| USB | BLE |  ~  |  `  |     |   |  &  | "|" |  !  |  ~  | \  |  _  |
             //                   | SYM | CMD | SPC |   | ENT | CTRL| NUM |
 
             bindings = <
