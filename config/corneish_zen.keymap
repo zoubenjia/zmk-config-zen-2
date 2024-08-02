@@ -36,16 +36,16 @@
             display-name = "QWERTY";
 
             // --------------------------------------------------------------------------------
-            // | ESC  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-            // | TAB  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   | 
-            // | SHIFT|  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ALT  |
-            //                    | LWR | GUI | SPC |   | ENT | CTRL | RSE |
+            // | ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | BKSP |
+            // | TAB |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |  '   | 
+            // | SHFT|  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  | ALT  |
+            //                   | SYM | CMD | SPC |   | ENT | CTRL | NUM |
 
             bindings = <
 &kp ESC    &kp Q  &kp W  &kp E   &kp R     &kp T          &kp Y        &kp U      &kp I      &kp O    &kp P     &kp BSPC
 &kp TAB    &kp A  &kp S  &kp D   &kp F     &kp G          &kp H        &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&td0    &kp Z  &kp X  &kp C   &kp V     &kp B          &kp N        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RALT
-                         &mo 1   &kp LGUI  &lt 3 SPACE    &lt 3 ENTER  &kp RCTRL  &mo 2  
+&td0       &kp Z  &kp X  &kp C   &kp V     &kp B          &kp N        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RALT
+                         &mo 2   &kp LGUI  &lt 3 SPACE    &lt 3 ENTER  &kp RCTRL  &mo 1  
             >;
         };
 
@@ -53,43 +53,50 @@
             display-name = "NUMBER";
 
             // -----------------------------------------------------------------------------------------
-            // | ESC  |  1    |  2   |  3  |  4  |  5   |    |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | TAB  |  BT1  | BT2  | BT3 | BT4 |BT_CLR|    | LFT | DWN |  UP | RGT | HOME| PGUP |
-            // | SHIFT|RGB_OFF|RGB_ON|     |     |      |    |     |     |     |     | END | PGDN |
-            //                       | LWR |     | SPC  |    | INS | DEL | RSE |
+            // | ESC  |  6  |  7  |  8  |  9  |  0  |    | BT1 | BT2 | BT3 | BT4 |BT_CLR| BKSP |
+            // | TAB  |  1  |  2  |  3  |  4  |  5  |    | LFT | DWN |  UP | RGT | HOME | PGUP |
+            // | SHFT |L_OFF|L_ON |     |     |     |    | INS | DEL |     |     | END  | PGDN |
+            //                    | SYM | CMD | SPC |    | ENT | CTRL| NUM |
 
             bindings = <
-&trans  &kp N1           &kp N2          &kp N3             &kp N4            &kp N5             &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
-&trans  &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2       &bt BT_SEL 3      &bt BT_CLR_ALL     &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &ext_power EP_OFF  &ext_power EP_ON  &rgb_ug RGB_EFF    &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
-                                         &trans             &trans            &trans             &kp INS          &kp DEL          &trans
+&trans   &kp N6           &kp N7          &kp N8    &kp N9    &kp N0        &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_CLR_ALL  &kp BSPC
+&trans   &kp N1           &kp N2          &kp N3    &kp N4    &kp N5        &kp LEFT       &kp DOWN      &kp UP         &kp RIGHT      &kp HOME        &kp PG_UP     
+&trans   &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &none     &none     &none         &kp INS        &kp DEL       &none          &none          &kp END         &kp PG_DN
+                          &trans          &trans    &trans    &trans        &trans         &trans
             >;
         };
-
+//&ext_power EP_OFF  &ext_power EP_ON  &rgb_ug RGB_EFF    &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  
         raise_layer {
             display-name = "SYMBOL";
 
             // -----------------------------------------------------------------------------------------
-            // | ESC |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | TAB |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | ALT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                   | LWR |     | SPC |   | ENT |     | RSE |
+            // | ESC |  ^  |  &  |  *  |  (  |  )  |   |  -  |  (  |  )  |  _  | BKSP |
+            // | TAB |  !  |  @  |  #  |  $  |  %  |   |  =  |  [  |  ]  |  \  |  `   |
+            // | SHFT| USB | BLE |     |     |     |   |  +  |  {  |  }  | "|" |  ~   |
+            //                   | SYM | CMD | SPC |   | ENT | CTRL| NUM |
 
             bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans  &none         &none         &none     &none     &none        &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_USB  &out OUT_BLE  &none     &none     &none        &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                    &trans    &trans    &trans       &trans     &trans     &trans
+&trans  &kp CARET     &kp AMPS      &kp ASTRK  &kp LPAR  &kp RPAR     &kp MINUS  &kp LPAR  &kp RPAR  &kp UNDER  &kp BSPC
+&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR  &kp PRCNT    &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH   &kp GRAVE
+&trans  &out OUT_USB  &out OUT_BLE  &none      &none     &none        &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE   &kp TILDE
+                                    &trans     &trans    &trans       &trans     &trans     &trans
             >;
         };
 
         layer_3 {
             display-name = "Fn";
-            bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4      &kp F5         &kp F6       &kp F7  &kp F8  &kp F9  &kp F10          &kp F11
-&trans  &trans  &trans  &trans  &sys_reset  &bootloader    &bootloader  &trans  &trans  &trans  &kp PRINTSCREEN  &kp F12
-&trans  &trans  &trans  &trans  &trans      &trans         &trans       &trans  &trans  &trans  &kp SCROLLLOCK   &kp PAUSE_BREAK
-                        &trans  &trans      &trans         &trans       &trans  &trans
+
+            // -----------------------------------------------------------------------------------------
+            // | F1  |  F2|  F3| F4 | F5 | F6 |   |F7   | F8  | F9  | F10 | F11  | F12  |
+            // | TAB |    |    |    |    |    |   | LFT | DWN | UP  | RGT | HOME | PGUP |
+            // | ALT |    |    |    |    |    |   | INS | DEL |     |     | END  | PGDN |
+            //                 |LWR |    |SPC |   | ENT |     | RSE |
+
+        bindings = <
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5      &kp F6         &kp F7    &kp F8    &kp F9  &kp F10    &kp F11   &kp F12
+&trans  &trans  &trans  &trans  &sys_reset  &bootloader    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp HOME  &kp PG_UP  
+&trans  &trans  &trans  &trans  &trans      &trans         &kp INS   &kp DEL   &none   &none      &kp END   &kp PG_DN
+                        &trans  &trans      &trans         &trans  &trans  &trans
             >;
         };
     };
