@@ -79,7 +79,7 @@
 &trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR  &kp PRCNT    &kp PLUS  &kp MINUS  &kp ASTRK  &kp FSLH   &kp CARET  &kp EQUAL
 &trans  &kp CARET     &kp AMPS      &kp ASTRK  &kp LPAR  &kp RPAR     &kp LPAR  &kp RPAR   &kp LBKT   &kp RBKT   &kp LBRC   &kp RBRC
 &trans  &out OUT_USB  &out OUT_BLE  &kp TILDE  &kp GRAVE   &none      &kp AMPS  &kp PIPE   &kp EXCL   &kp TILDE  &kp BSLH   &kp UNDER
-                                    &trans     &trans    &trans       &trans    &trans     &trans
+                                    &trans     &trans    &trans       &trans    &trans     &kp LALT
             >;
         };
 
