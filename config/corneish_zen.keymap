@@ -37,15 +37,15 @@
 
             // --------------------------------------------------------------------------------
             // | ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | BKSP |
-            // | TAB |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |  '   | 
-            // | SHFT|  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  | ALT  |
+            // | TAB |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |'/ALT | 
+            // | SHFT|  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  | SHFT |
             //                   | SYM | CMD | SPC |   | ENT | CTRL| NUM |
 
             bindings = <
 &kp ESC    &kp Q  &kp W  &kp E   &kp R     &kp T          &kp Y        &kp U      &kp I      &kp O    &kp P     &kp BSPC
-&kp TAB    &kp A  &kp S  &kp D   &kp F     &kp G          &kp H        &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&td0       &kp Z  &kp X  &kp C   &kp V     &kp B          &kp N        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RALT
-                         &mo 2   &kp LGUI  &lt 3 SPACE    &lt 3 ENTER  &kp RCTRL  &mo 1  
+&kp TAB    &kp A  &kp S  &kp D   &kp F     &kp G          &kp H        &kp J      &kp K      &kp L    &kp SEMI  &mt RALT SQT
+&LSHFT     &kp Z  &kp X  &kp C   &kp V     &kp B          &kp N        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                         &mo 2  &kp LGUI  &lt 3 SPACE     &lt 3 ENTER  &kp RCTRL  &mo 1  
             >;
         };
 
@@ -78,7 +78,7 @@
             bindings = <
 &trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR  &kp PRCNT    &kp PLUS  &kp MINUS  &kp ASTRK  &kp FSLH   &kp CARET  &kp EQUAL
 &trans  &kp CARET     &kp AMPS      &kp ASTRK  &kp LPAR  &kp RPAR     &kp LPAR  &kp RPAR   &kp LBKT   &kp RBKT   &kp LBRC   &kp RBRC
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none     &none        &kp AMPS  &kp PIPE   &kp EXCL   &kp TILDE  &kp BSLH   &kp GRAVE
+&trans  &out OUT_USB  &out OUT_BLE  &kp TILDE  &kp GRAVE   &none      &kp AMPS  &kp PIPE   &kp EXCL   &kp TILDE  &kp BSLH   &kp UNDER
                                     &trans     &trans    &trans       &trans    &trans     &trans
             >;
         };
@@ -88,7 +88,7 @@
 
             // -----------------------------------------------------------------------------------------
             // | F1  | F2 | F3 | F4 | F5 | F6 |   | F7  | F8  | F9  | F10 | F11  | F12  |
-            // | TAB |    |    |    |    |    |   | LFT | DWN | UP  | RGT | DEL  | INS |
+            // | TAB |    |    |    |    |    |   | LFT | DWN | UP  | RGT | DEL  | INS  |
             // | SHFT|    |    |    |    |    |   | HOME| PGDN| PGUP| END |      |      |
             //                 |SYM |CMD |SPC |   | ENT | CTRL| NUM |
 
